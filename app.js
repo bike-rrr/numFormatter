@@ -16,7 +16,6 @@ function shortComma(num) {
 const textbox = document.querySelector("input");
 const field = document.querySelector(".field");
 document.addEventListener('input', (event) => {
-    const textField = event.target.value;
     if (event.target.value[0] === "0") {
         if (event.target.value[event.target.value.length - 1] === "0") {
             field.innerHTML = '0';
