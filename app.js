@@ -20,10 +20,10 @@ document.addEventListener('input', (event) => {
         if (event.target.value[event.target.value.length - 1] === "0") {
             field.innerHTML = '0';
             event.target.value = "0"
-            return;
+            return; // 0 or 00 or 000 or 0000000 wont get past here
         }
         event.target.value = event.target.value.substring(1);
-        field.innerHTML = shortComma(event.target.value.substring(1))
+        field.innerHTML = shortComma(event.target.value)
     } else {
         field.innerHTML = shortComma(event.target.value);
     }
